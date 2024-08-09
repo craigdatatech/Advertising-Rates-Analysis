@@ -1,0 +1,7 @@
+#For this project, I used SQL to query the database stored on BigQuery to access the tables.
+I used aggregate functions and GROUP BY to collate the data. I then ordered by "max_impressions", and used a limit of 10, to be able to see the top ten countries in the world.
+
+SELECT MAX(ad_type) AS advert_type, COUNT (impressions) AS max_impressions, regions AS countries
+GROUP BY regions
+ORDER BY max_impressions DESC
+LIMIT 10
